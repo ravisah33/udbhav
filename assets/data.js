@@ -4,9 +4,10 @@ var udbhavObj = {
   address: "<h3>Contact<br><br>0612-2580507<br>+91 9582301968<br>+91 9471340746 <br><br><b>UDBHAV ARCHITECTS</b><br>01, ground floor, white house<br>Anand vihar, opp Bandhan Bank<br>Ashiana digha road, patna 800025</h3><a href='mailto:info@udbhavarchitects.com?Subject=Hello%20Mail' target='_top'>info@udbhavarchitects.com</a><br><br>",
   projects: [{
       id: 0,
-      name: "Lanterns Kitchen & Bar",
-      thumbnailImg: "a.jpg",
-      bannerImg: ["Lanterns01.jpg", "Lanterns02.jpg", "Lanterns03.jpg", "Lanterns04.jpg", "Lanterns05.jpg", "Lanterns06.jpg", "Lanterns07.jpg", "Lanterns08.jpg", "Lanterns09.jpg", "Lanterns10.jpg", "Lanterns11.jpg", "Lanterns12.jpg", "Lanterns13.jpg"],
+      name: "Lanterns Kitchen & Ba",
+      thumbnailImg: "01.JPG",
+      imgPath:'img/dps-city',
+      bannerImg: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg"],
       arcImg: ["abc.png", "auc.jpg"],
       Area: "3200 sq. ft.",
       Value: "1.5 Cr.",
