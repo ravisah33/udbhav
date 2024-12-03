@@ -1,113 +1,120 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="ravi">
-    <meta name="generator" content="ravi">
-    <title>Udhabhav Architects Patna</title>
+<head>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbars-offcanvas/">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <link href="assets/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/style.css" rel="stylesheet">
-    
-  </head>
-  <body ng-app="mainApp" class="pb-4">
-    
-<main ng-controller="udbController">
-  <div class="container-fluid">
-  <nav class="navbar navbar-expand-lg mb-1" aria-label="Offcanvas navbar large">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="ravi">
+  <meta name="generator" content="ravi">
+  <title>Udhabhav Architects Patna</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbars-offcanvas/">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+  <link href="assets/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/style.css" rel="stylesheet">
+
+</head>
+
+<body ng-app="mainApp" class="pb-4">
+
+  <main ng-controller="udbController">
+    <nav class="navbar navbar-expand-lg mb-1" aria-label="Offcanvas navbar large">
       <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-      <img src="img/logo.png" alt="Udhabhav">
-    </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Udhabhav</h5>
-          <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link" href="#" ng-click="onclickLink('about')">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" ng-click="onclickLink('team')">Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#" ng-click="onclickLink('projects')">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" ng-click="onclickLink('address')">Contact</a>
-            </li>
-          </ul>
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" alt="Udhabhav">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+          aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2"
+          aria-labelledby="offcanvasNavbar2Label">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Udhabhav</h5>
+            <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link" href="#" ng-click="onclickLink('about')">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" ng-click="onclickLink('team')">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#" ng-click="onclickLink('projects')">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" ng-click="onclickLink('address')">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+    </nav>
+    <div class="banner-container">
+      <div class="container">
+        <div class="img">
+        </div>
+      </div>      
     </div>
-  </nav>
-  <div class="logo-bar mb-3">
-    <div class="img"></div>
-  </div>
-</div>
-  <div class="container">
-    
-    <div class="row">
-      <div class="col-md-9">
-        <section id="about-ud" ng-if="activeNav == 'about'">
-          <div ng-bind-html="udata.about"></div>
-        </section>
-         <section id="team-ud" ng-if="activeNav == 'team'">
-          <div ng-bind-html="udata.team"></div>
-        </section>
-         <section id="address-ud" ng-if="activeNav == 'address'">
-          <div ng-bind-html="udata.address"></div>
-        </section>
-         <section id="projects-ud" ng-if="activeNav == 'projects'">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col" ng-repeat="items in udata.projects">
-                  <div class="card h-100" ng-if="items.thumbnailImg">
-                    <img src="{{items.imgPath}}/{{items.thumbnailImg}}" class="card-img-top" alt="{{items.name}}">
-                    <div class="card-body">
-                      <h5 class="card-title">{{items.name}}</h5>
-                      <p class="card-text">{{items.Scope}}</p>
-                    </div>
-                    <div class="card-footer">
-                      <small class="text-body-secondary">{{items.city}}</small>
-                    </div>
+    <div class="container py-5">
+
+      <div class="row">
+        <div class="col-md-12">
+          <section id="about-ud" ng-if="activeNav == 'about'">
+            <div ng-bind-html="udata.about"></div>
+          </section>
+          <section id="team-ud" ng-if="activeNav == 'team'">
+            <div ng-bind-html="udata.team"></div>
+          </section>
+          <section id="address-ud" ng-if="activeNav == 'address'">
+            <div ng-bind-html="udata.address"></div>
+          </section>
+          <section id="projects-ud" ng-if="activeNav == 'projects'">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+              <div class="col" ng-repeat="items in udata.projects">
+                <div class="card h-100 shadow-sm bg-white" ng-if="items.thumbnailImg">
+                  <img src="{{items.imgPath}}/{{items.thumbnailImg}}" class="card-img-top" alt="{{items.name}}">
+                  <div class="card-body">
+                    <h5 class="card-title">{{items.name}}</h5>
+                    <p class="card-text">{{items.Scope}}</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-body-secondary">{{items.city}}</small>
                   </div>
                 </div>
+              </div>
             </div>
-        </section>
+          </section>
+        </div>
+        <!-- <div class="col-md-3 d-none d-md-block bg-body-tertiary">3</div> -->
       </div>
-      <div class="col-md-3 d-none d-md-block bg-body-tertiary">3</div>
     </div>
-  </div>
-</main>
-<script src="assets/color-modes.js"></script>
-<script type="text/javascript" src="assets/angular.min.js"></script>
-<script src="assets/angular-sanitize.min.js"></script>
-<script type="text/javascript" src="assets/jquery.min.js"></script>
-<script src="assets/bootstrap.bundle.min.js"></script>
-<script src="assets/data.js"></script>
-<script type="text/javascript">
-  var app = angular.module("mainApp", ['ngSanitize']);  
-  app.controller('udbController', function ($scope,$http) {  
+  </main>
+  <script src="assets/color-modes.js"></script>
+  <script type="text/javascript" src="assets/angular.min.js"></script>
+  <script src="assets/angular-sanitize.min.js"></script>
+  <script type="text/javascript" src="assets/jquery.min.js"></script>
+  <script src="assets/bootstrap.bundle.min.js"></script>
+  <script src="assets/data.js"></script>
+  <script type="text/javascript">
+    var app = angular.module("mainApp", ['ngSanitize']);
+    app.controller('udbController', function ($scope, $http) {
       $scope.udata = udbhavObj;
       $scope.activeNav = 'projects';
       $scope.onclickLink = function (d) {
-          $scope.activeNav = d;  
-               console.log('activenav',d, $scope.udata)
-      } 
+        $scope.activeNav = d;
+        console.log('activenav', d, $scope.udata)
+      }
 
-  });  
-  
+    });
 
-</script>
-    </body>
+
+  </script>
+</body>
+
 </html>
